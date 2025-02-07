@@ -1,0 +1,8 @@
+name: Sample Github Actions
+run-name: ${{ github.actor }} is the listed actor.
+on: [push]
+jobs:
+  sample-job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hi Github 👋"
