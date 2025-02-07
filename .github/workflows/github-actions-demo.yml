@@ -1,5 +1,5 @@
 name: Sample Github Actions
-run-name: ${{ github.actor }} pushed a new commit: ${{ github.event.head_commit.message }}
+run-name: "${{ github.actor }} pushed a new commit: ${{ github.actor }}"
 on: [push]
 jobs:
   sample-job-1:
