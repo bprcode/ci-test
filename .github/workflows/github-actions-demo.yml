@@ -13,7 +13,7 @@ jobs:
           echo $RANDOM >> art.txt
           echo last line >> art.txt
       - name: Load up the random artifact
-      - uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: random-artifact
           path: art.txt
