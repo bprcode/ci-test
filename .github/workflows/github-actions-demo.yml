@@ -8,7 +8,7 @@ jobs:
       - run: echo "Hi Github 👁️"
       - run: 'echo -e "\nat time:\t$(date)\nin location:\t$(pwd)\n\nwith process list: $(ps) "'
       - name: Construct artifact
-      - run: |
+        run: |
           echo first line >> art.txt
           echo $RANDOM >> art.txt
           echo last line >> art.txt
