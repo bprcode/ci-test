@@ -7,3 +7,13 @@ jobs:
     steps:
       - run: echo "Hi Github 👁️"
       - run: 'echo -e "\nat time:\t$(date)\nin location:\t$(pwd)\n\nwith process list: $(ps) "'
+      - name: Construct artifact
+      - run: |
+          echo first line >> art.txt
+          echo $RANDOM >> art.txt
+          echo last line >> art.txt
+      - name: Load up the random artifact
+      - uses: actions/upload-artifact@v4
+        with:
+          name: random-artifact
+          path: art.txt
