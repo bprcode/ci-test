@@ -9,10 +9,12 @@ jobs:
         name: Weird Eyeball Greeting
       - run: 'echo -e "\nat time:\t$(date)\nin location:\t$(pwd)\n\nwith process list: $(ps) "'
       - name: Construct artifact
+        env: ENVSECRET: ${{ secrets.EXAMPLE_SECRET }}
         run: |
           echo first line >> art.txt
           echo $RANDOM >> art.txt
           echo last line >> art.txt
+          echo "It is a bad idea to do this with secrets: $ENVSECRET" >> art.txt
       - name: Load up the random artifact
         uses: actions/upload-artifact@v4
         with:
