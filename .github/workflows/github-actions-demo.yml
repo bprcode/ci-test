@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hi Github 👁️"
+        name: Weird Eyeball Greeting
       - run: 'echo -e "\nat time:\t$(date)\nin location:\t$(pwd)\n\nwith process list: $(ps) "'
       - name: Construct artifact
         run: |
